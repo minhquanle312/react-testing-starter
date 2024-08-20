@@ -1,16 +1,16 @@
-import delay from "delay";
-import { useEffect, useState } from "react";
+import delay from 'delay'
+import { useEffect, useState } from 'react'
 
 const TagList = () => {
-  const [tags, setTags] = useState<string[]>([]);
+  const [tags, setTags] = useState<string[]>([])
 
   useEffect(() => {
     const fetchTags = async () => {
-      await delay(500);
-      setTags(["tag1", "tag2", "tag3"]);
-    };
-    fetchTags();
-  });
+      await delay(500)
+      setTags(['tag1', 'tag2', 'tag3'])
+    }
+    fetchTags()
+  })
 
   return (
     <ul>
@@ -18,7 +18,7 @@ const TagList = () => {
         <li key={tag}>{tag}</li>
       ))}
     </ul>
-  );
-};
+  )
+}
 
-export default TagList;
+export default TagList
